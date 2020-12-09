@@ -1,4 +1,4 @@
-with open('5-input.txt') as file:
+with open('day_5_input.txt') as file:
     data = file.read()
 
 binary_encoded_seats = (

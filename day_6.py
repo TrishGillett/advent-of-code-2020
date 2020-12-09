@@ -1,4 +1,4 @@
-with open('6-input.txt') as file:
+with open('day_6_input.txt') as file:
     data = file.read()
 
 groups = (

@@ -1,4 +1,4 @@
-with open('3-input.txt') as file:
+with open('day_3_input.txt') as file:
     data = file.read()
 
 lines = data.strip().split('\n')

@@ -1,4 +1,4 @@
-with open('7-input.txt') as file:
+with open('day_7_input.txt') as file:
     data = file.read()
 
 rules = (

@@ -1,4 +1,4 @@
-with open('8-input.txt') as file:
+with open('day_8_input.txt') as file:
     data = file.read()
 
 instructions = (

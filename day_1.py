@@ -1,4 +1,4 @@
-with open('1-input.txt') as file:
+with open('day_1_input.txt') as file:
     data = file.read().strip()
 
 numbers = [int(num_str.strip()) for num_str in data.split('\n')]

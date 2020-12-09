@@ -1,4 +1,4 @@
-with open('4-input.txt') as file:
+with open('day_4_input.txt') as file:
     data = file.read()
 
 passports = data.strip().split('\n\n')
