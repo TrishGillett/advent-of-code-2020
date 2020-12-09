@@ -3,9 +3,6 @@ with open('day_1_input.txt') as file:
 
 numbers = [int(num_str.strip()) for num_str in data.split('\n')]
 
-# part 1: find a pair of numbers in the list that sum to 2020
-# approach: Sort numbers, focus on fixing the small number and then looking for an appropriate large number
-
 def find_pair(num_list, sum):
     num_list = sorted(num_list)
     for i, small_num in enumerate(num_list):
@@ -15,19 +12,14 @@ def find_pair(num_list, sum):
 
         for larger_num in reversed(num_list):
             if small_num + larger_num == sum:
-                print 'numbers: {}, {}'.format(small_num, larger_num)
-                print 'product: {}'.format(small_num * larger_num)
+                # print 'numbers: {}, {}'.format(small_num, larger_num)
+                # print 'product: {}'.format(small_num * larger_num)
+                return small_num, larger_num
             elif small_num + larger_num < sum:
                 # Since we're checking 'larger number' candidates in descending order,
                 # we won't find successful candidates past this point
                 break
-
-print('part 1')
-find_pair(numbers, 2020)
-print('')
-
-# part 2: find a trio of numbers in the list that sum to 2020
-# approach: Sort numbers, focus on fixing the small number and a medium number and then looking for an appropriate large number
+    return None
 
 def find_trio(num_list, sum):
     num_list = sorted(num_list)
@@ -48,5 +40,16 @@ def find_trio(num_list, sum):
                     print 'numbers: {}, {}, {}'.format(small_num, med_num, larger_num)
                     print 'product: {}'.format(small_num * med_num * larger_num)
 
-print('part 2')
-find_trio(numbers, 2020)
+if __name__ == '__main__':
+    # part 1: find a pair of numbers in the list that sum to 2020
+    # approach: Sort numbers, focus on fixing the small number and then looking for an appropriate large number
+
+    print('part 1')
+    find_pair(numbers, 2020)
+    print('')
+
+    # part 2: find a trio of numbers in the list that sum to 2020
+    # approach: Sort numbers, focus on fixing the small number and a medium number and then looking for an appropriate large number
+
+    print('part 2')
+    find_trio(numbers, 2020)
